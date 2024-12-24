@@ -1,0 +1,13 @@
+- name: Install Docker on local machine
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: install required dependencies
+      ansible.builtin.apt:
+        name: docker
+        state: present
+    - name: install docker compose
+      ansible.builtin.apt:
+        name: docker-compose
+        state: present
+        
