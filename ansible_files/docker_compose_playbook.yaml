@@ -2,6 +2,9 @@
   hosts: localhost
   become: yes
   tasks:
+    - name: output facts
+      debug:
+        var: ansible_facts
     - name: install required dependencies
       ansible.builtin.apt:
         name: docker

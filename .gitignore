@@ -64,3 +64,4 @@ ansible_files/inventory/
 ansible_files/hosts
 
 playground_creds.txt
+notes.txt
