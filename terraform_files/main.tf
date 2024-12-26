@@ -13,18 +13,12 @@ provider "azurerm" {
   skip_provider_registration = true
 }
 
-# get current resource group
+# getting current resource group as playground permissions are limited
 data "azurerm_resource_group" "existing" {
   name = var.rg_name 
 }
 
-# Create a resource group
-# resource "data.azurerm_resource_group" "rg-tkxelassign2" {
-#   name     = "resources-tkxelassign2"
-#   location = "eastus"
-# }
-
-# Create a virtual network within the resource group
+# Creating a virtual network 
 resource "azurerm_virtual_network" "vn-tkxelassign2" {
   name                = "network-tkxelassign2"
   resource_group_name = data.azurerm_resource_group.existing.name
