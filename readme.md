@@ -12,7 +12,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terr
     export ARM_SUBSCRIPTION_ID="your-subscription-id"
     export ARM_TENANT_ID="your-tenant-id"
 - In playground cannot create new resource groups so get current resource group
-name: az gorup list
+name: az group list
 
 - /home/{username}/.ssh/authorized_keys is fixed path for azure by default.
 
